@@ -1,6 +1,4 @@
-
-from itertools import count
-
+#!/usr/bin/python3
 
 var=1
 
