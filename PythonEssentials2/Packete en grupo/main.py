@@ -1,40 +1,70 @@
 from sys import path
+import os, platform
 
-path.append('C:\\Users\\Aprendiz\\Documents\\CiscoPythonADSI\\PythonEssentials2\\Packete en grupo\\package')
+#path.append('C:\\Users\\Aprendiz\\Documents\\CiscoPythonADSI\\PythonEssentials2\\Packete en grupo\\package')
+path.append(path[0]+'/package')
+from luis.operations import moduloDiv, exponenciacion, mult, suma, rest
 
-from luis.operations import moduloDiv, exponenciacion, mult
+if platform.system() == "Windows":
+    def clear():
+        os.system('cls')
+else:   
+    def clear():
+        os.system('clear')
 
-moduloDiv()
-
-mult()
-
-exponenciacion()
-
-
-
-
-
-
-
-
-
-'''
-
-list= [1,'perro','casa','name',5]
-
-buscarvalor= (input('que va abucar??'))
-
-if buscarvalor in list:
-    for i in range(len(list)):
-        if buscarvalor == list[i]:
-            cambiar=input('quiere cambiare el valor '+list[i]+' (s o n):')
-            if cambiar == 's':
-                list[i]= input('nuevo valor:') 
-            else:
-                continue
+def main():
+    clear()
+    print('''
+    --- MODULOS Y PAQUETES EN PYTHON ---
             
+            --- Luis Fernando Ch.  ---
 
-print(list)
-'''
+        Eliga una opcion: 
+    ''')
+    while True:
+        print('''
+        ------------------------------
+        1. Residuo de divicion
+        2. exponenciacion
+        3. multiplicacion
+        4. suma
+        5. resta
+    ''')
+        try:
+            opcion=int(input('Eliga una opcion:  '))
+            if opcion == 1:
+                clear()
+                moduloDiv()
+            elif opcion == 2:
+                clear()
+                exponenciacion()
+            elif opcion == 3:
+                clear()
+                mult()
+            elif opcion == 4:
+                clear()
+                suma()
+            elif opcion == 5:
+                clear()
+                rest()
+            else:
+                print('Opción no válida')
+        except:
+            print('Opción no válida')
+        finally:
+            opc = input('Desea continuar? (s/n): ')
+            if opc == 's':
+                clear()
+            else:
+                clear()
+                print('BYE')
+                break
+
+
+
+if __name__ == "__main__":
+    main()
+
+
 
 
