@@ -4,6 +4,8 @@ import os, platform
 #path.append('C:\\Users\\Aprendiz\\Documents\\CiscoPythonADSI\\PythonEssentials2\\Packete en grupo\\package')
 path.append(path[0]+'/package')
 from luis.operations import moduloDiv, exponenciacion, mult, suma, rest
+#from eduard. import hipotenusa, factorial, ceil
+#from jimmy. import seno, coseno, tangente
 
 if platform.system() == "Windows":
     def clear():
@@ -29,6 +31,13 @@ def main():
         3. multiplicacion
         4. suma
         5. resta
+        6. seno
+        7. coseno
+        8. tangente
+        9. Hipotenusa
+        10.Factorial
+        11.Ceil
+        12.
     ''')
         try:
             opcion=int(input('Eliga una opcion:  '))
@@ -47,6 +56,26 @@ def main():
             elif opcion == 5:
                 clear()
                 rest()
+            elif opcion == 6:
+                clear()
+                seno()
+            elif opcion == 7:
+                clear()
+                coseno()
+            elif opcion == 8:
+                clear()
+                tangente()
+            elif opcion == 9:
+                clear()
+                hipotenusa()
+            elif opcion == 10:
+                clear()
+                factorial()
+            elif opcion == 11:
+                clear()
+                ceil()
+            elif opcion == 12:
+                pass
             else:
                 print('Opción no válida')
         except:
