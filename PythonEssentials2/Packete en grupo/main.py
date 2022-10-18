@@ -1,17 +1,20 @@
+#!/usr/local/bin/python3.8
+
+#Luis Fernando Ch. 2022
+
 from sys import path
 import os, platform
 
 #path.append('C:\\Users\\Aprendiz\\Documents\\CiscoPythonADSI\\PythonEssentials2\\Packete en grupo\\package')
 path.append(path[0]+'/package')
 from luis.operations import moduloDiv, exponenciacion, mult, suma, rest
-#from eduard. import hipotenusa, factorial, ceil
-#from jimmy. import seno, coseno, tangente
+from eduard.moduloEduard import hypotenusa, fac, cei
+from juan.ejercicio import radio, gcd
 
-if platform.system() == "Windows":
-    def clear():
+def clear():
+    if platform.system() == 'Windows':
         os.system('cls')
-else:   
-    def clear():
+    else:
         os.system('clear')
 
 def main():
@@ -31,8 +34,8 @@ def main():
         3. multiplicacion
         4. suma
         5. resta
-        6. seno
-        7. coseno
+        6. radio
+        7. gcd
         8. tangente
         9. Hipotenusa
         10.Factorial
@@ -58,22 +61,22 @@ def main():
                 rest()
             elif opcion == 6:
                 clear()
-                seno()
+                radio()
             elif opcion == 7:
                 clear()
-                coseno()
+                gcd()
             elif opcion == 8:
                 clear()
-                tangente()
+                pass
             elif opcion == 9:
                 clear()
-                hipotenusa()
+                print(hypotenusa())
             elif opcion == 10:
                 clear()
-                factorial()
+                print(fac())
             elif opcion == 11:
                 clear()
-                ceil()
+                print(cei())
             elif opcion == 12:
                 pass
             else:
