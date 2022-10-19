@@ -10,6 +10,7 @@ path.append(path[0]+'/package')
 from luis.operations import moduloDiv, exponenciacion, mult, suma, rest
 from eduard.moduloEduard import hypotenusa, fac, cei
 from juan.ejercicio import radio, gcd
+from jimmy.Jimmy import sin,porcentaje
 
 def clear():
     if platform.system() == 'Windows':
@@ -36,11 +37,11 @@ def main():
         5. resta
         6. radio
         7. gcd
-        8. tangente
+        8. porcentaje
         9. Hipotenusa
         10.Factorial
         11.Ceil
-        12.
+        12.seno
     ''')
         try:
             opcion=int(input('Eliga una opcion:  '))
@@ -67,7 +68,7 @@ def main():
                 gcd()
             elif opcion == 8:
                 clear()
-                pass
+                porcentaje()
             elif opcion == 9:
                 clear()
                 print(hypotenusa())
@@ -78,7 +79,7 @@ def main():
                 clear()
                 print(cei())
             elif opcion == 12:
-                pass
+                sin()
             else:
                 print('Opción no válida')
         except:
